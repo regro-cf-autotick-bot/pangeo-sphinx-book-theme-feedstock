@@ -1,5 +1,5 @@
 {% set name = "pangeo-sphinx-book-theme" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pangeo_sphinx_book_theme-{{ version }}.tar.gz
-  sha256: 5287c46cc063858ccfe870d3dae52e5ddf015666a2474a790ee3f8403891ba38
+  sha256: 5c5fed269b594daab7fe3bd3a1a199afcee35b8f860c84c75b85775d5abd02e6
 
 build:
   noarch: python
@@ -20,8 +20,8 @@ requirements:
     - python >=3.7
   run:
     - python >=3.7
-    - sphinx
-    - sphinx-book-theme <=0.1.7
+    - sphinx >=3,<5
+    - sphinx-book-theme
 
 test:
   imports:
@@ -40,4 +40,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - meghanrjones
+    - maxrjones
